@@ -3,7 +3,7 @@
  */
 
 // ===== 設定區 =====
-const TOTAL_QR_CODES = 20;  // 請根據實際圖片數量修改
+const TOTAL_QR_CODES = 1;  // 請根據實際圖片數量修改
 const QR_FOLDER = 'assets/qrcodes/';
 const IMAGE_EXTENSION = 'png';
 
