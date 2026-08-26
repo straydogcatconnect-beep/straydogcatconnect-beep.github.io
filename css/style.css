@@ -182,136 +182,11 @@ a {
    一般使用者頁面樣式 (user-home.html)
    ================================================================ */
 
-/* ----- 導航欄 ----- */
-.navbar {
-    background-color: #2d2d2d;
-    padding: 0 1.5rem;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
-}
-
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 64px;
-}
-
-.nav-brand {
-    color: #ffffff;
-    font-size: 1.4rem;
-    font-weight: 600;
-    text-decoration: none;
-    letter-spacing: 1px;
-}
-
-.nav-brand:hover {
-    color: #e88a5e;
-}
-
-.nav-menu {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-    align-items: center;
-}
-
-.nav-menu li a {
-    color: #e0e0e0;
-    text-decoration: none;
-    font-size: 0.95rem;
-    padding: 0.4rem 0;
-    border-bottom: 2px solid transparent;
-    transition: color 0.2s, border-color 0.2s;
-}
-
-.nav-menu li a:hover {
-    color: #ffffff;
-    border-bottom-color: #e88a5e;
-}
-
-.nav-menu li a.active {
-    color: #ffffff;
-    border-bottom-color: #e88a5e;
-}
-
-.nav-logout {
-    color: #ff9a8b !important;
-    border-bottom-color: transparent !important;
-    font-weight: 500;
-}
-
-.nav-logout:hover {
-    color: #ff6b5a !important;
-    border-bottom-color: #ff6b5a !important;
-}
-
-/* 漢堡按鈕 */
-.nav-toggle {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 4px;
-}
-
-.nav-toggle span {
-    display: block;
-    width: 26px;
-    height: 3px;
-    background: #ffffff;
-    border-radius: 2px;
-    transition: 0.3s;
-}
-
-/* ----- 歡迎橫幅 ----- */
-.welcome-banner {
-    background-image: url('https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=1200&q=80');
-    background-size: cover;
-    background-position: center;
-    min-height: 30vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.welcome-overlay {
-    background-color: rgba(0, 0, 0, 0.45);
-    width: 100%;
-    min-height: 30vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem 1.5rem;
-}
-
-.welcome-content {
-    text-align: center;
-    color: #ffffff;
-}
-
-.welcome-content h1 {
-    font-size: 2.4rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-}
-
-.welcome-content p {
-    font-size: 1.2rem;
-    opacity: 0.9;
-}
-
 /* ----- 功能卡片區 ----- */
 .feature-section {
     padding: 3rem 1.5rem;
     background: #faf8f5;
+    flex: 1;
 }
 
 .feature-grid {
@@ -424,6 +299,148 @@ a {
 }
 
 /* ================================================================
+   愛心碼頁面樣式 (qrcode.html)
+   ================================================================ */
+
+/* ----- 愛心碼主區域 ----- */
+.qrcode-section {
+    flex: 1;
+    padding: 3rem 1.5rem;
+    background: linear-gradient(180deg, #faf8f5 0%, #f0ebe3 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+}
+
+.qrcode-section .container {
+    text-align: center;
+    max-width: 700px;
+}
+
+.qrcode-subtitle {
+    font-size: 1.1rem;
+    color: #6b5a4a;
+    margin-bottom: 2rem;
+}
+
+/* ----- 愛心碼顯示區 ----- */
+.qrcode-display {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    min-height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.8rem;
+    border: 2px dashed #e5dcd2;
+    transition: border-color 0.3s;
+}
+
+.qrcode-display.has-image {
+    border-color: #e88a5e;
+    border-style: solid;
+}
+
+/* ----- 佔位符 ----- */
+.qrcode-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+}
+
+.placeholder-icon {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.5;
+}
+
+.qrcode-placeholder p {
+    font-size: 1rem;
+    color: #bbb;
+}
+
+.qrcode-placeholder p small {
+    font-size: 0.8rem;
+    color: #ccc;
+}
+
+/* ----- 愛心碼圖片 ----- */
+.qrcode-image {
+    max-width: 100%;
+    max-height: 400px;
+    width: auto;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    object-fit: contain;
+}
+
+/* ----- 抽選按鈕 ----- */
+.qrcode-draw-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    padding: 1rem 3.5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    background: linear-gradient(145deg, #f5a77a, #e88a5e);
+    border: none;
+    border-radius: 60px;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 24px rgba(232, 138, 94, 0.35);
+    margin-bottom: 1rem;
+}
+
+.qrcode-draw-btn:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 16px 40px rgba(232, 138, 94, 0.45);
+}
+
+.qrcode-draw-btn:active {
+    transform: scale(0.95);
+}
+
+.qrcode-draw-btn .btn-icon {
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+
+/* ----- 狀態文字 ----- */
+.qrcode-status {
+    font-size: 0.95rem;
+    color: #999;
+    margin: 0.8rem 0 1.2rem;
+    min-height: 1.8rem;
+}
+
+/* ----- 返回按鈕 ----- */
+.qrcode-back-btn {
+    display: inline-block;
+    padding: 0.6rem 1.8rem;
+    color: #6b5a4a;
+    background: transparent;
+    border: 2px solid #dccfc2;
+    border-radius: 40px;
+    font-size: 0.95rem;
+    transition: all 0.25s ease;
+    margin-top: 0.5rem;
+}
+
+.qrcode-back-btn:hover {
+    background: #f0ebe3;
+    border-color: #c7b09b;
+    transform: translateX(-4px);
+}
+
+/* ================================================================
    頁尾 (共用)
    ================================================================ */
 .footer {
@@ -441,7 +458,6 @@ a {
    ================================================================ */
 @media (min-width: 769px) and (max-width: 1024px) {
 
-    /* 首頁 */
     .hero {
         min-height: 45vh;
         background-attachment: scroll;
@@ -456,14 +472,12 @@ a {
         font-size: 1.4rem;
     }
 
-    /* 按鈕 */
     .btn {
         width: 220px;
         padding: 1.6rem 1.2rem;
         font-size: 1.3rem;
     }
 
-    /* 功能卡片 */
     .feature-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
@@ -545,88 +559,6 @@ a {
         font-size: 0.8rem;
     }
 
-    /* ===== 使用者頁面 - 導航欄 ===== */
-    .navbar {
-        padding: 0 1rem;
-    }
-
-    .nav-container {
-        height: 56px;
-    }
-
-    .nav-brand {
-        font-size: 1.1rem;
-    }
-
-    .nav-toggle {
-        display: flex;
-    }
-
-    .nav-toggle span {
-        width: 22px;
-        height: 2.5px;
-    }
-
-    .nav-menu {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 56px;
-        left: 0;
-        right: 0;
-        background: #2d2d2d;
-        padding: 1rem 1.5rem;
-        gap: 0.5rem;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-        border-top: 1px solid #444;
-    }
-
-    .nav-menu.active {
-        display: flex;
-    }
-
-    .nav-menu li {
-        width: 100%;
-    }
-
-    .nav-menu li a {
-        font-size: 1rem;
-        padding: 0.6rem 0;
-        display: block;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    .nav-menu li a:hover,
-    .nav-menu li a.active {
-        border-bottom: 1px solid #e88a5e;
-        color: #e88a5e;
-    }
-
-    .nav-logout {
-        color: #ff9a8b !important;
-    }
-
-    /* ===== 使用者頁面 - 歡迎橫幅 ===== */
-    .welcome-banner {
-        min-height: 20vh;
-        background-position: center 40%;
-    }
-
-    .welcome-overlay {
-        min-height: 20vh;
-        padding: 1.5rem 1rem;
-        background-color: rgba(0, 0, 0, 0.55);
-    }
-
-    .welcome-content h1 {
-        font-size: 1.4rem;
-        margin-bottom: 0.3rem;
-    }
-
-    .welcome-content p {
-        font-size: 0.9rem;
-    }
-
     /* ===== 使用者頁面 - 功能卡片 ===== */
     .feature-section {
         padding: 2rem 1rem;
@@ -677,7 +609,7 @@ a {
         margin-top: 0.2rem;
     }
 
-    /* ===== 使用者頁面 - 最新消息 ===== */
+    /* ===== 最新消息 ===== */
     .news-section {
         padding: 2rem 1rem;
     }
@@ -711,6 +643,43 @@ a {
         padding-left: 0;
         margin-top: 0.1rem;
         color: #333;
+    }
+
+    /* ===== 愛心碼頁面 ===== */
+    .qrcode-section {
+        padding: 2rem 1rem;
+        min-height: 60vh;
+    }
+
+    .qrcode-display {
+        padding: 1.2rem;
+        min-height: 240px;
+        border-radius: 18px;
+    }
+
+    .qrcode-image {
+        max-height: 280px;
+    }
+
+    .placeholder-icon {
+        font-size: 3rem;
+    }
+
+    .qrcode-draw-btn {
+        padding: 0.8rem 2.5rem;
+        font-size: 1.5rem;
+    }
+
+    .qrcode-draw-btn .btn-icon {
+        font-size: 1.6rem;
+    }
+
+    .qrcode-status {
+        font-size: 0.85rem;
+    }
+
+    .qrcode-subtitle {
+        font-size: 0.95rem;
     }
 
     /* ===== 頁尾 ===== */
@@ -754,14 +723,6 @@ a {
     }
 
     /* 使用者頁面 */
-    .welcome-content h1 {
-        font-size: 1.2rem;
-    }
-
-    .welcome-content p {
-        font-size: 0.8rem;
-    }
-
     .card-icon {
         font-size: 1.8rem;
     }
@@ -795,6 +756,35 @@ a {
         font-size: 1.1rem;
     }
 
+    /* 愛心碼頁面 */
+    .qrcode-display {
+        padding: 1rem;
+        min-height: 180px;
+        border-radius: 14px;
+    }
+
+    .qrcode-image {
+        max-height: 200px;
+    }
+
+    .qrcode-draw-btn {
+        padding: 0.6rem 2rem;
+        font-size: 1.2rem;
+        border-radius: 40px;
+    }
+
+    .qrcode-draw-btn .btn-icon {
+        font-size: 1.2rem;
+    }
+
+    .placeholder-icon {
+        font-size: 2.4rem;
+    }
+
+    .qrcode-placeholder p {
+        font-size: 0.85rem;
+    }
+
     .footer {
         font-size: 0.7rem;
         padding: 0.8rem 0.5rem;
@@ -819,14 +809,6 @@ a {
         padding: 0.8rem 1rem;
     }
 
-    .welcome-banner {
-        min-height: 35vh;
-    }
-
-    .welcome-overlay {
-        min-height: 35vh;
-    }
-
     .feature-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 0.8rem;
@@ -834,5 +816,13 @@ a {
 
     .feature-card {
         padding: 1rem 0.8rem;
+    }
+
+    .qrcode-display {
+        min-height: 180px;
+    }
+
+    .qrcode-image {
+        max-height: 200px;
     }
 }
