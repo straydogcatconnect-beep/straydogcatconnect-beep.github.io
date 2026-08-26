@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>浪愛傳遞 - 一般使用者</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <!-- ===== 頂部導航欄 ===== -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">🐾 浪愛傳遞</a>
+            <button class="nav-toggle" id="navToggle" aria-label="選單">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="user-home.html" class="active">首頁</a></li>
+                <li><a href="#">認養專區</a></li>
+                <li><a href="#">通報救援</a></li>
+                <li><a href="#">捐款支持</a></li>
+                <li><a href="#">關於我們</a></li>
+                <li><a href="index.html" class="nav-logout">登出</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ===== 歡迎橫幅 ===== -->
+    <section class="welcome-banner">
+        <div class="welcome-overlay">
+            <div class="welcome-content">
+                <h1>🐶 歡迎回來，愛心守護者！</h1>
+                <p>一起為流浪動物創造更好的未來</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 功能卡片區 ===== -->
+    <section class="feature-section">
+        <div class="container">
+            <h2 class="section-title">📋 服務項目</h2>
+            <div class="feature-grid">
+                <!-- 卡片 1：認養 -->
+                <a href="#" class="feature-card">
+                    <div class="card-icon">🐕</div>
+                    <h3>認養毛孩</h3>
+                    <p>瀏覽等待認養的狗狗貓貓，給牠們一個溫暖的家</p>
+                    <span class="card-badge">立即認養 →</span>
+                </a>
+                <!-- 卡片 2：通報 -->
+                <a href="#" class="feature-card">
+                    <div class="card-icon">📢</div>
+                    <h3>通報救援</h3>
+                    <p>發現受傷或受困的流浪動物，立即通報我們</p>
+                    <span class="card-badge">立即通報 →</span>
+                </a>
+                <!-- 卡片 3：捐款 -->
+                <a href="#" class="feature-card">
+                    <div class="card-icon">❤️</div>
+                    <h3>捐款支持</h3>
+                    <p>您的每一份愛心，都能幫助更多毛孩獲得醫療與照護</p>
+                    <span class="card-badge">立即捐款 →</span>
+                </a>
+                <!-- 卡片 4：志工 -->
+                <a href="#" class="feature-card">
+                    <div class="card-icon">🤝</div>
+                    <h3>志工招募</h3>
+                    <p>加入我們的行列，用行動守護流浪動物</p>
+                    <span class="card-badge">了解更多 →</span>
+                </a>
+                <!-- 卡片 5：醫療 -->
+                <a href="#" class="feature-card">
+                    <div class="card-icon">🏥</div>
+                    <h3>醫療照護</h3>
+                    <p>了解我們提供的醫療服務與健康照護計畫</p>
+                    <span class="card-badge">了解更多 →</span>
+                </a>
+                <!-- 卡片 6：教育 -->
+                <a href="#" class="feature-card">
+                    <div class="card-icon">📚</div>
+                    <h3>生命教育</h3>
+                    <p>推廣尊重生命、愛護動物的觀念與知識</p>
+                    <span class="card-badge">了解更多 →</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 最新消息區 ===== -->
+    <section class="news-section">
+        <div class="container">
+            <h2 class="section-title">📰 最新消息</h2>
+            <div class="news-list">
+                <div class="news-item">
+                    <span class="news-date">2026-08-25</span>
+                    <span class="news-tag">認養</span>
+                    <p class="news-title">🐕 小黑終於找到家了！感謝認養人的愛心</p>
+                </div>
+                <div class="news-item">
+                    <span class="news-date">2026-08-24</span>
+                    <span class="news-tag">救援</span>
+                    <p class="news-title">🚑 成功救援三隻受困幼貓，目前狀況穩定</p>
+                </div>
+                <div class="news-item">
+                    <span class="news-date">2026-08-23</span>
+                    <span class="news-tag">活動</span>
+                    <p class="news-title">🎉 本週六舉辦「浪浪認養會」，歡迎大家來參與！</p>
+                </div>
+                <div class="news-item">
+                    <span class="news-date">2026-08-22</span>
+                    <span class="news-tag">捐款</span>
+                    <p class="news-title">🙏 感謝各界善心人士，本月捐款已達目標！</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 頁尾 ===== -->
+    <footer class="footer">
+        <p>&copy; 2026 浪愛傳遞 · 用愛終止流浪</p>
+    </footer>
+
+    <!-- ===== 行動版選單 JavaScript ===== -->
+    <script>
+        const toggle = document.getElementById('navToggle');
+        const menu = document.getElementById('navMenu');
+
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>
