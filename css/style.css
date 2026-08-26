@@ -236,9 +236,9 @@ a {
 
 .feature-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);  /* 電腦 2 欄 */
     gap: 1.8rem;
-    max-width: 1200px;
+    max-width: 800px;  /* 縮小寬度讓卡片更集中 */
     margin: 0 auto;
 }
 
@@ -726,7 +726,7 @@ a {
         padding: 2rem 1rem;
     }
     .feature-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr;  /* 手機 1 欄 */
         gap: 1rem;
         max-width: 100%;
     }
