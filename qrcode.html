@@ -10,26 +10,46 @@
 
     <!-- ===== 愛心碼主內容 ===== -->
     <section class="qrcode-section">
-        <div class="container">
-            <h2 class="section-title">❤️ 愛心碼抽選</h2>
-            <p class="qrcode-subtitle">點擊下方按鈕，隨機抽出一個愛心碼</p>
-
-            <div class="qrcode-display" id="qrcodeDisplay">
-                <div class="qrcode-placeholder" id="qrcodePlaceholder">
-                    <span class="placeholder-icon">🎲</span>
-                    <p>點擊「抽」按鈕開始</p>
-                </div>
-                <img id="qrcodeImage" class="qrcode-image" style="display: none;" alt="愛心碼" />
+        <div class="qrcode-container">
+            
+            <!-- 標題區域 -->
+            <div class="qrcode-header">
+                <h1 class="qrcode-title">❤️ 愛心碼抽選</h1>
+                <p class="qrcode-subtitle">每張愛心碼都代表一份祝福，抽一張屬於你的幸運碼吧！</p>
             </div>
 
-            <button class="qrcode-draw-btn" id="drawBtn">
-                <span class="btn-icon">🎯</span>
-                抽！
-            </button>
+            <!-- 卡片顯示區 -->
+            <div class="qrcode-card">
+                <div class="qrcode-display" id="qrcodeDisplay">
+                    <!-- 預設佔位符 -->
+                    <div class="qrcode-placeholder" id="qrcodePlaceholder">
+                        <div class="placeholder-icon">🎲</div>
+                        <h3>準備好了嗎？</h3>
+                        <p>點擊下方按鈕，抽一張愛心碼</p>
+                    </div>
+                    <!-- 愛心碼圖片 -->
+                    <img id="qrcodeImage" class="qrcode-image" style="display: none;" alt="愛心碼" />
+                </div>
 
-            <p class="qrcode-status" id="qrcodeStatus">點擊按鈕抽選愛心碼</p>
+                <!-- 狀態顯示 -->
+                <div class="qrcode-info">
+                    <p class="qrcode-status" id="qrcodeStatus">💡 點擊「抽一張」開始</p>
+                </div>
 
-            <a href="user-home.html" class="qrcode-back-btn">← 返回使用者首頁</a>
+                <!-- 抽選按鈕 -->
+                <button class="qrcode-draw-btn" id="drawBtn">
+                    <span class="btn-icon">🎯</span>
+                    抽一張
+                </button>
+
+                <!-- 返回按鈕 -->
+                <a href="user-home.html" class="qrcode-back-btn">
+                    ← 返回使用者首頁
+                </a>
+            </div>
+
+            <!-- 底部裝飾文字 -->
+            <p class="qrcode-footer-text">🐾 每一張愛心碼，都是浪愛串聯的祝福</p>
         </div>
     </section>
 
