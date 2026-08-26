@@ -1,4 +1,82 @@
 /* ================================================================
+   通用按鈕樣式 (所有頁面共用)
+   ================================================================ */
+
+/* ----- 左上角回首頁按鈕容器 ----- */
+.back-home-btn {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 0.8rem 1.5rem;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+/* ----- 通用返回按鈕 (回首頁 / 返回上一頁) ----- */
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #6b5a4a;
+    text-decoration: none;
+    padding: 0.4rem 1rem;
+    border-radius: 40px;
+    transition: all 0.25s ease;
+    background: transparent;
+    border: 1.5px solid #e5dcd2;
+    cursor: pointer;
+}
+
+.btn-back:hover {
+    background: #f0ebe3;
+    border-color: #c7b09b;
+    transform: translateX(-3px);
+}
+
+.btn-back:active {
+    transform: scale(0.95);
+}
+
+/* ----- 小型返回按鈕 (用於卡片內或小空間) ----- */
+.btn-back-sm {
+    font-size: 0.8rem;
+    padding: 0.25rem 0.8rem;
+    border-width: 1.5px;
+}
+
+/* ----- 大型返回按鈕 (用於需要特別強調的頁面) ----- */
+.btn-back-lg {
+    font-size: 1.1rem;
+    padding: 0.6rem 1.5rem;
+}
+
+/* ----- 手機版調整 ----- */
+@media (max-width: 768px) {
+    .back-home-btn {
+        padding: 0.5rem 1rem;
+    }
+
+    .btn-back {
+        font-size: 0.85rem;
+        padding: 0.3rem 0.8rem;
+    }
+
+    .btn-back-sm {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.6rem;
+    }
+
+    .btn-back-lg {
+        font-size: 0.95rem;
+        padding: 0.5rem 1.2rem;
+    }
+}
+
+/* ================================================================
    全域重置 & 字型
    ================================================================ */
 * {
