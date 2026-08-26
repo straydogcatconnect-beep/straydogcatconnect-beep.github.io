@@ -36,20 +36,29 @@
                     <p class="qrcode-status" id="qrcodeStatus">💡 點擊「抽一張」開始</p>
                 </div>
 
-                <!-- 抽選按鈕 -->
-                <button class="qrcode-draw-btn" id="drawBtn">
-                    <span class="btn-icon">🎯</span>
-                    抽一張
-                </button>
+                <!-- 按鈕群組 -->
+                <div class="qrcode-btn-group">
+                    <!-- 抽選按鈕 -->
+                    <button class="qrcode-draw-btn" id="drawBtn">
+                        <span class="btn-icon">🎯</span>
+                        抽一張
+                    </button>
+                    
+                    <!-- 下載按鈕（預設隱藏，抽到圖片後才顯示） -->
+                    <button class="qrcode-download-btn" id="downloadBtn" style="display: none;">
+                        <span class="btn-icon">⬇️</span>
+                        下載愛心碼
+                    </button>
+                </div>
 
                 <!-- 返回按鈕 -->
-                <a href="user-home.html" class="qrcode-back-btn">
+                <a href="user-home.html" class="btn-back btn-back-lg" style="margin-top: 0.8rem; justify-content: center;">
                     ← 返回使用者首頁
                 </a>
             </div>
 
             <!-- 底部裝飾文字 -->
-            <p class="qrcode-footer-text">🐾 每一張愛心碼，都是浪愛串聯的密碼</p>
+            <p class="qrcode-footer-text">🐾 每一張愛心碼，都是浪愛串聯的祝福</p>
         </div>
     </section>
 
