@@ -1,82 +1,4 @@
 /* ================================================================
-   通用按鈕樣式 (所有頁面共用)
-   ================================================================ */
-
-/* ----- 左上角回首頁按鈕容器 ----- */
-.back-home-btn {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    padding: 0.8rem 1.5rem;
-    background: rgba(255, 255, 255, 0.92);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
-}
-
-/* ----- 通用返回按鈕 (回首頁 / 返回上一頁) ----- */
-.btn-back {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    font-size: 0.95rem;
-    font-weight: 500;
-    color: #6b5a4a;
-    text-decoration: none;
-    padding: 0.4rem 1rem;
-    border-radius: 40px;
-    transition: all 0.25s ease;
-    background: transparent;
-    border: 1.5px solid #e5dcd2;
-    cursor: pointer;
-}
-
-.btn-back:hover {
-    background: #f0ebe3;
-    border-color: #c7b09b;
-    transform: translateX(-3px);
-}
-
-.btn-back:active {
-    transform: scale(0.95);
-}
-
-/* ----- 小型返回按鈕 (用於卡片內或小空間) ----- */
-.btn-back-sm {
-    font-size: 0.8rem;
-    padding: 0.25rem 0.8rem;
-    border-width: 1.5px;
-}
-
-/* ----- 大型返回按鈕 (用於需要特別強調的頁面) ----- */
-.btn-back-lg {
-    font-size: 1.1rem;
-    padding: 0.6rem 1.5rem;
-}
-
-/* ----- 手機版調整 ----- */
-@media (max-width: 768px) {
-    .back-home-btn {
-        padding: 0.5rem 1rem;
-    }
-
-    .btn-back {
-        font-size: 0.85rem;
-        padding: 0.3rem 0.8rem;
-    }
-
-    .btn-back-sm {
-        font-size: 0.7rem;
-        padding: 0.2rem 0.6rem;
-    }
-
-    .btn-back-lg {
-        font-size: 0.95rem;
-        padding: 0.5rem 1.2rem;
-    }
-}
-
-/* ================================================================
    全域重置 & 字型
    ================================================================ */
 * {
@@ -125,10 +47,58 @@ a {
 }
 
 /* ================================================================
+   通用按鈕樣式 (所有頁面共用)
+   ================================================================ */
+
+/* ----- 左上角回首頁按鈕容器 ----- */
+.back-home-btn {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 0.8rem 1.5rem;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+/* ----- 通用返回按鈕 ----- */
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #6b5a4a;
+    text-decoration: none;
+    padding: 0.4rem 1rem;
+    border-radius: 40px;
+    transition: all 0.25s ease;
+    background: transparent;
+    border: 1.5px solid #e5dcd2;
+    cursor: pointer;
+}
+
+.btn-back:hover {
+    background: #f0ebe3;
+    border-color: #c7b09b;
+    transform: translateX(-3px);
+}
+
+.btn-back:active {
+    transform: scale(0.95);
+}
+
+.btn-back-lg {
+    font-size: 1.1rem;
+    padding: 0.6rem 1.5rem;
+}
+
+/* ================================================================
    首頁樣式 (index.html)
    ================================================================ */
 
-/* ----- 主視覺區 (Hero) ----- */
+/* ----- 主視覺區 ----- */
 .hero {
     background-image: url('https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=1200&q=80');
     background-size: cover;
@@ -238,7 +208,6 @@ a {
     margin-top: 0.2rem;
 }
 
-/* 一般使用者按鈕 */
 .btn-user {
     background: linear-gradient(145deg, #f5a77a, #e88a5e);
 }
@@ -247,7 +216,6 @@ a {
     background: linear-gradient(145deg, #f7b48c, #ea7f4b);
 }
 
-/* 管理員按鈕 */
 .btn-admin {
     background: linear-gradient(145deg, #5a6c7d, #3d4a5a);
 }
@@ -257,10 +225,9 @@ a {
 }
 
 /* ================================================================
-   一般使用者頁面樣式 (user-home.html)
+   使用者頁面樣式 (user-home.html)
    ================================================================ */
 
-/* ----- 功能卡片區 ----- */
 .feature-section {
     padding: 3rem 1.5rem;
     background: #faf8f5;
@@ -327,7 +294,7 @@ a {
     color: #d4733e;
 }
 
-/* ----- 最新消息區 ----- */
+/* ----- 最新消息 ----- */
 .news-section {
     padding: 3rem 1.5rem;
     background: #ffffff;
@@ -377,10 +344,9 @@ a {
 }
 
 /* ================================================================
-   愛心碼頁面專屬樣式 (qrcode.html) - 美化版
+   愛心碼頁面樣式 (qrcode.html)
    ================================================================ */
 
-/* ----- 愛心碼主區域 ----- */
 .qrcode-section {
     flex: 1;
     padding: 2.5rem 1.5rem;
@@ -397,7 +363,6 @@ a {
     margin: 0 auto;
 }
 
-/* ----- 標題區域 ----- */
 .qrcode-header {
     text-align: center;
     margin-bottom: 2rem;
@@ -427,7 +392,6 @@ a {
     margin-top: 0.8rem;
 }
 
-/* ----- 卡片容器 ----- */
 .qrcode-card {
     background: #ffffff;
     border-radius: 32px;
@@ -440,7 +404,6 @@ a {
     box-shadow: 0 24px 72px rgba(0, 0, 0, 0.12);
 }
 
-/* ----- 愛心碼顯示區 ----- */
 .qrcode-display {
     background: #fbf9f6;
     border-radius: 20px;
@@ -460,7 +423,6 @@ a {
     background: #fefcf9;
 }
 
-/* ----- 佔位符 ----- */
 .qrcode-placeholder {
     display: flex;
     flex-direction: column;
@@ -491,7 +453,6 @@ a {
     color: #bbb;
 }
 
-/* ----- 愛心碼圖片 ----- */
 .qrcode-image {
     max-width: 100%;
     max-height: 400px;
@@ -514,7 +475,6 @@ a {
     }
 }
 
-/* ----- 狀態資訊 ----- */
 .qrcode-info {
     text-align: center;
     margin: 1.2rem 0 1.5rem;
@@ -527,13 +487,12 @@ a {
     font-weight: 500;
 }
 
-.qrcode-status.active {
-    color: #3d2c1e;
-}
-
-.qrcode-status .highlight {
-    color: #e88a5e;
-    font-weight: 700;
+/* ----- 按鈕群組 ----- */
+.qrcode-btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 100%;
 }
 
 /* ----- 抽選按鈕 ----- */
@@ -563,7 +522,6 @@ a {
 
 .qrcode-draw-btn:active {
     transform: scale(0.97);
-    box-shadow: 0 4px 16px rgba(232, 138, 94, 0.25);
 }
 
 .qrcode-draw-btn .btn-icon {
@@ -571,31 +529,41 @@ a {
     margin-bottom: 0;
 }
 
-/* ----- 返回按鈕 ----- */
-.qrcode-back-btn {
-    display: inline-flex;
+/* ----- 下載按鈕 ----- */
+.qrcode-download-btn {
+    display: none;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 0.8rem;
     width: 100%;
-    padding: 0.7rem 1.5rem;
-    color: #6b5a4a;
-    background: transparent;
-    border: 2px solid #dccfc2;
+    padding: 0.9rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: linear-gradient(145deg, #6a9fb5, #4a8ba3);
+    border: none;
     border-radius: 60px;
-    font-size: 0.95rem;
-    transition: all 0.25s ease;
-    margin-top: 0.8rem;
-    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 24px rgba(74, 139, 163, 0.30);
+    letter-spacing: 0.5px;
+    animation: fadeIn 0.4s ease;
 }
 
-.qrcode-back-btn:hover {
-    background: #f0ebe3;
-    border-color: #c7b09b;
-    transform: translateX(-4px);
+.qrcode-download-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 36px rgba(74, 139, 163, 0.40);
 }
 
-/* ----- 底部文字 ----- */
+.qrcode-download-btn:active {
+    transform: scale(0.97);
+}
+
+.qrcode-download-btn .btn-icon {
+    font-size: 1.4rem;
+    margin-bottom: 0;
+}
+
 .qrcode-footer-text {
     text-align: center;
     font-size: 0.9rem;
@@ -605,181 +573,85 @@ a {
 }
 
 /* ================================================================
-   愛心碼 - 手機響應
+   頁尾
    ================================================================ */
-@media (max-width: 768px) {
-    .qrcode-section {
-        padding: 1.5rem 1rem;
-        min-height: 70vh;
-    }
-
-    .qrcode-title {
-        font-size: 1.8rem;
-    }
-
-    .qrcode-subtitle {
-        font-size: 0.9rem;
-    }
-
-    .qrcode-card {
-        padding: 1.5rem 1.2rem;
-        border-radius: 24px;
-    }
-
-    .qrcode-display {
-        padding: 1.2rem;
-        min-height: 260px;
-        border-radius: 16px;
-    }
-
-    .qrcode-image {
-        max-height: 240px;
-    }
-
-    .placeholder-icon {
-        font-size: 3.5rem;
-    }
-
-    .qrcode-placeholder h3 {
-        font-size: 1.1rem;
-    }
-
-    .qrcode-placeholder p {
-        font-size: 0.85rem;
-    }
-
-    .qrcode-draw-btn {
-        padding: 0.9rem 1.5rem;
-        font-size: 1.3rem;
-    }
-
-    .qrcode-draw-btn .btn-icon {
-        font-size: 1.4rem;
-    }
-
-    .qrcode-status {
-        font-size: 0.9rem;
-    }
-
-    .qrcode-back-btn {
-        font-size: 0.85rem;
-        padding: 0.6rem 1.2rem;
-    }
-
-    .qrcode-footer-text {
-        font-size: 0.8rem;
-        margin-top: 1.2rem;
-    }
+.footer {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    background-color: #2d2d2d;
+    color: #cccccc;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    margin-top: auto;
 }
 
-@media (max-width: 400px) {
-    .qrcode-title {
-        font-size: 1.5rem;
+/* ================================================================
+   響應式設計 - 平板
+   ================================================================ */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero {
+        min-height: 45vh;
+        background-attachment: scroll;
     }
-
-    .qrcode-card {
-        padding: 1rem 0.8rem;
-        border-radius: 20px;
+    .hero-overlay {
+        min-height: 45vh;
     }
-
-    .qrcode-display {
-        padding: 0.8rem;
-        min-height: 200px;
-        border-radius: 14px;
+    .hero-title {
+        font-size: 2.4rem;
     }
-
-    .qrcode-image {
-        max-height: 170px;
+    .hero-subtitle {
+        font-size: 1.4rem;
     }
-
-    .placeholder-icon {
-        font-size: 2.8rem;
+    .btn {
+        width: 220px;
+        padding: 1.6rem 1.2rem;
+        font-size: 1.3rem;
     }
-
-    .qrcode-placeholder h3 {
-        font-size: 0.95rem;
-    }
-
-    .qrcode-placeholder p {
-        font-size: 0.75rem;
-    }
-
-    .qrcode-draw-btn {
-        padding: 0.7rem 1.2rem;
-        font-size: 1.1rem;
-    }
-
-    .qrcode-draw-btn .btn-icon {
-        font-size: 1.2rem;
-    }
-
-    .qrcode-status {
-        font-size: 0.8rem;
-    }
-
-    .qrcode-back-btn {
-        font-size: 0.8rem;
-        padding: 0.5rem 1rem;
-    }
-
-    .qrcode-footer-text {
-        font-size: 0.7rem;
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
 }
 
 /* ================================================================
-   響應式設計 - 手機 (螢幕寬度 <= 768px)
+   響應式設計 - 手機
    ================================================================ */
 @media (max-width: 768px) {
-
-    /* ===== 首頁 ===== */
     .hero {
         min-height: 35vh;
         background-attachment: scroll;
         background-position: center 30%;
     }
-
     .hero-overlay {
         min-height: 35vh;
         padding: 1.2rem 1rem;
     }
-
     .hero-title {
         font-size: 1.8rem;
-        letter-spacing: 1px;
     }
-
     .hero-subtitle {
         font-size: 1rem;
-        margin-bottom: 0.5rem;
     }
-
     .hero-description {
         font-size: 0.9rem;
-        line-height: 1.6;
     }
-
     .role-selection {
         padding: 1.8rem 1rem;
     }
-
     .section-title {
         font-size: 1.3rem;
         margin-bottom: 1.5rem;
     }
-
     .section-title::after {
         width: 40px;
         height: 3px;
     }
-
     .button-group {
         flex-direction: column;
         align-items: center;
         gap: 1rem;
         width: 100%;
     }
-
     .btn {
         width: 100%;
         max-width: 100%;
@@ -788,27 +660,33 @@ a {
         border-radius: 16px;
         min-height: 120px;
     }
-
     .btn-icon {
         font-size: 2rem;
-        margin-bottom: 0.2rem;
     }
-
     .btn-hint {
         font-size: 0.8rem;
     }
 
-    /* ===== 使用者頁面 - 功能卡片 ===== */
+    .back-home-btn {
+        padding: 0.5rem 1rem;
+    }
+    .btn-back {
+        font-size: 0.85rem;
+        padding: 0.3rem 0.8rem;
+    }
+    .btn-back-lg {
+        font-size: 0.95rem;
+        padding: 0.5rem 1.2rem;
+    }
+
     .feature-section {
         padding: 2rem 1rem;
     }
-
     .feature-grid {
         grid-template-columns: 1fr;
         gap: 1rem;
         max-width: 100%;
     }
-
     .feature-card {
         padding: 1.2rem 1rem;
         border-radius: 16px;
@@ -818,19 +696,16 @@ a {
         align-items: center;
         gap: 0.5rem 1rem;
     }
-
     .card-icon {
         font-size: 2.2rem;
         margin-bottom: 0;
         flex: 0 0 auto;
     }
-
     .feature-card h3 {
         font-size: 1.1rem;
         margin-bottom: 0;
         flex: 1;
     }
-
     .feature-card p {
         font-size: 0.85rem;
         margin-bottom: 0;
@@ -839,7 +714,6 @@ a {
         order: 3;
         color: #888;
     }
-
     .card-badge {
         font-size: 0.75rem;
         order: 4;
@@ -848,80 +722,85 @@ a {
         margin-top: 0.2rem;
     }
 
-    /* ===== 最新消息 ===== */
     .news-section {
         padding: 2rem 1rem;
     }
-
     .news-list {
         max-width: 100%;
     }
-
     .news-item {
         flex-wrap: wrap;
         gap: 0.3rem 0.6rem;
         padding: 0.6rem 0.4rem;
-        border-bottom: 1px solid #f0ebe3;
     }
-
     .news-date {
         font-size: 0.7rem;
         min-width: auto;
         color: #aaa;
     }
-
     .news-tag {
         font-size: 0.6rem;
         padding: 1px 10px;
     }
-
     .news-title {
         font-size: 0.85rem;
         width: 100%;
         order: 3;
-        padding-left: 0;
-        margin-top: 0.1rem;
-        color: #333;
     }
 
-    /* ===== 愛心碼頁面 ===== */
     .qrcode-section {
-        padding: 2rem 1rem;
-        min-height: 60vh;
+        padding: 1.5rem 1rem;
+        min-height: 70vh;
     }
-
+    .qrcode-title {
+        font-size: 1.8rem;
+    }
+    .qrcode-subtitle {
+        font-size: 0.9rem;
+    }
+    .qrcode-card {
+        padding: 1.5rem 1.2rem;
+        border-radius: 24px;
+    }
     .qrcode-display {
         padding: 1.2rem;
-        min-height: 240px;
-        border-radius: 18px;
+        min-height: 260px;
+        border-radius: 16px;
     }
-
     .qrcode-image {
-        max-height: 280px;
+        max-height: 240px;
     }
-
     .placeholder-icon {
-        font-size: 3rem;
+        font-size: 3.5rem;
     }
-
-    .qrcode-draw-btn {
-        padding: 0.8rem 2.5rem;
-        font-size: 1.5rem;
+    .qrcode-placeholder h3 {
+        font-size: 1.1rem;
     }
-
-    .qrcode-draw-btn .btn-icon {
-        font-size: 1.6rem;
-    }
-
-    .qrcode-status {
+    .qrcode-placeholder p {
         font-size: 0.85rem;
     }
-
-    .qrcode-subtitle {
-        font-size: 0.95rem;
+    .qrcode-draw-btn {
+        padding: 0.9rem 1.5rem;
+        font-size: 1.3rem;
+    }
+    .qrcode-draw-btn .btn-icon {
+        font-size: 1.4rem;
+    }
+    .qrcode-download-btn {
+        padding: 0.7rem 1.5rem;
+        font-size: 1rem;
+    }
+    .qrcode-download-btn .btn-icon {
+        font-size: 1.2rem;
+    }
+    .qrcode-status {
+        font-size: 0.9rem;
+    }
+    .qrcode-footer-text {
+        font-size: 0.8rem;
+        margin-top: 1.2rem;
     }
 
-    /* ===== 頁尾 ===== */
     .footer {
         padding: 1rem 0.8rem;
         font-size: 0.8rem;
@@ -929,101 +808,101 @@ a {
 }
 
 /* ================================================================
-   響應式設計 - 極小手機 (螢幕寬度 <= 400px)
+   響應式設計 - 極小手機
    ================================================================ */
 @media (max-width: 400px) {
-
-    /* 首頁 */
     .hero-title {
         font-size: 1.5rem;
     }
-
     .hero-subtitle {
         font-size: 0.85rem;
     }
-
     .hero-description {
         font-size: 0.8rem;
     }
-
     .btn {
         font-size: 1rem;
         padding: 1rem 0.8rem;
         min-height: 100px;
         border-radius: 14px;
     }
-
     .btn-icon {
         font-size: 1.6rem;
     }
-
     .btn-hint {
         font-size: 0.7rem;
     }
 
-    /* 使用者頁面 */
     .card-icon {
         font-size: 1.8rem;
     }
-
     .feature-card h3 {
         font-size: 0.95rem;
     }
-
     .feature-card p {
         font-size: 0.75rem;
     }
-
     .card-badge {
         font-size: 0.7rem;
     }
-
     .news-date {
         font-size: 0.6rem;
     }
-
     .news-tag {
         font-size: 0.55rem;
         padding: 1px 8px;
     }
-
     .news-title {
         font-size: 0.78rem;
     }
-
     .section-title {
         font-size: 1.1rem;
     }
 
-    /* 愛心碼頁面 */
+    .qrcode-title {
+        font-size: 1.5rem;
+    }
+    .qrcode-card {
+        padding: 1rem 0.8rem;
+        border-radius: 20px;
+    }
     .qrcode-display {
-        padding: 1rem;
-        min-height: 180px;
+        padding: 0.8rem;
+        min-height: 200px;
         border-radius: 14px;
     }
-
     .qrcode-image {
-        max-height: 200px;
+        max-height: 170px;
     }
-
+    .placeholder-icon {
+        font-size: 2.8rem;
+    }
+    .qrcode-placeholder h3 {
+        font-size: 0.95rem;
+    }
+    .qrcode-placeholder p {
+        font-size: 0.75rem;
+    }
     .qrcode-draw-btn {
-        padding: 0.6rem 2rem;
-        font-size: 1.2rem;
-        border-radius: 40px;
+        padding: 0.7rem 1.2rem;
+        font-size: 1.1rem;
     }
-
     .qrcode-draw-btn .btn-icon {
         font-size: 1.2rem;
     }
-
-    .placeholder-icon {
-        font-size: 2.4rem;
+    .qrcode-download-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
     }
-
-    .qrcode-placeholder p {
-        font-size: 0.85rem;
+    .qrcode-download-btn .btn-icon {
+        font-size: 1rem;
     }
-
+    .qrcode-status {
+        font-size: 0.8rem;
+    }
+    .qrcode-footer-text {
+        font-size: 0.7rem;
+    }
     .footer {
         font-size: 0.7rem;
         padding: 0.8rem 0.5rem;
@@ -1031,36 +910,29 @@ a {
 }
 
 /* ================================================================
-   響應式設計 - 手機橫向 (螢幕寬度 480px ~ 768px 且為橫向)
+   響應式設計 - 手機橫向
    ================================================================ */
 @media (max-width: 768px) and (orientation: landscape) {
-
     .hero {
         min-height: 60vh;
     }
-
     .hero-overlay {
         min-height: 60vh;
     }
-
     .btn {
         min-height: 80px;
         padding: 0.8rem 1rem;
     }
-
     .feature-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 0.8rem;
     }
-
     .feature-card {
         padding: 1rem 0.8rem;
     }
-
     .qrcode-display {
         min-height: 180px;
     }
-
     .qrcode-image {
         max-height: 200px;
     }
