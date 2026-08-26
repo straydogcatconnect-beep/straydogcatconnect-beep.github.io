@@ -344,9 +344,10 @@ a {
 }
 
 /* ================================================================
-   愛心碼頁面樣式 (qrcode.html)
+   愛心碼頁面樣式 (qrcode.html) - 完整版
    ================================================================ */
 
+/* ----- 愛心碼主區域 ----- */
 .qrcode-section {
     flex: 1;
     padding: 2.5rem 1.5rem;
@@ -363,6 +364,7 @@ a {
     margin: 0 auto;
 }
 
+/* ----- 標題區域 ----- */
 .qrcode-header {
     text-align: center;
     margin-bottom: 2rem;
@@ -392,6 +394,7 @@ a {
     margin-top: 0.8rem;
 }
 
+/* ----- 卡片容器 ----- */
 .qrcode-card {
     background: #ffffff;
     border-radius: 32px;
@@ -404,6 +407,7 @@ a {
     box-shadow: 0 24px 72px rgba(0, 0, 0, 0.12);
 }
 
+/* ----- 愛心碼顯示區 ----- */
 .qrcode-display {
     background: #fbf9f6;
     border-radius: 20px;
@@ -423,6 +427,7 @@ a {
     background: #fefcf9;
 }
 
+/* ----- 佔位符 ----- */
 .qrcode-placeholder {
     display: flex;
     flex-direction: column;
@@ -438,8 +443,13 @@ a {
 }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 .qrcode-placeholder h3 {
@@ -453,6 +463,7 @@ a {
     color: #bbb;
 }
 
+/* ----- 愛心碼圖片 ----- */
 .qrcode-image {
     max-width: 100%;
     max-height: 400px;
@@ -475,6 +486,7 @@ a {
     }
 }
 
+/* ----- 狀態資訊 ----- */
 .qrcode-info {
     text-align: center;
     margin: 1.2rem 0 1.5rem;
@@ -487,7 +499,10 @@ a {
     font-weight: 500;
 }
 
-/* ----- 按鈕群組 ----- */
+/* ================================================================
+   按鈕群組
+   ================================================================ */
+
 .qrcode-btn-group {
     display: flex;
     flex-direction: column;
@@ -536,23 +551,39 @@ a {
     justify-content: center;
     gap: 0.8rem;
     width: 100%;
-    padding: 0.9rem 2rem;
-    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    font-size: 1.3rem;
     font-weight: 600;
     color: #ffffff;
-    background: linear-gradient(145deg, #6a9fb5, #4a8ba3);
+    background: linear-gradient(145deg, #5a9fb5, #3d8ba3);
     border: none;
     border-radius: 60px;
     cursor: pointer;
-    transition: transform 0.25s ease, box-shadow 0.3s ease;
-    box-shadow: 0 8px 24px rgba(74, 139, 163, 0.30);
+    transition: transform 0.25s ease, box-shadow 0.3s ease, background 0.3s ease;
+    box-shadow: 0 8px 24px rgba(61, 139, 163, 0.35);
     letter-spacing: 0.5px;
-    animation: fadeIn 0.4s ease;
+}
+
+.qrcode-download-btn.show {
+    display: inline-flex;
+    animation: fadeInUp 0.4s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .qrcode-download-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 14px 36px rgba(74, 139, 163, 0.40);
+    box-shadow: 0 14px 36px rgba(61, 139, 163, 0.45);
+    background: linear-gradient(145deg, #6aafc5, #4a9bb3);
 }
 
 .qrcode-download-btn:active {
@@ -560,10 +591,17 @@ a {
 }
 
 .qrcode-download-btn .btn-icon {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     margin-bottom: 0;
 }
 
+/* 下載成功後的短暫效果 */
+.qrcode-download-btn.success {
+    background: linear-gradient(145deg, #5cb885, #3da36a);
+    box-shadow: 0 8px 24px rgba(61, 163, 106, 0.35);
+}
+
+/* ----- 底部文字 ----- */
 .qrcode-footer-text {
     text-align: center;
     font-size: 0.9rem;
@@ -586,7 +624,7 @@ a {
 }
 
 /* ================================================================
-   響應式設計 - 平板
+   響應式設計 - 平板 (769px ~ 1024px)
    ================================================================ */
 @media (min-width: 769px) and (max-width: 1024px) {
     .hero {
@@ -614,7 +652,7 @@ a {
 }
 
 /* ================================================================
-   響應式設計 - 手機
+   響應式設計 - 手機 (螢幕寬度 <= 768px)
    ================================================================ */
 @media (max-width: 768px) {
     .hero {
@@ -635,9 +673,11 @@ a {
     .hero-description {
         font-size: 0.9rem;
     }
+
     .role-selection {
         padding: 1.8rem 1rem;
     }
+
     .section-title {
         font-size: 1.3rem;
         margin-bottom: 1.5rem;
@@ -646,6 +686,7 @@ a {
         width: 40px;
         height: 3px;
     }
+
     .button-group {
         flex-direction: column;
         align-items: center;
@@ -667,6 +708,7 @@ a {
         font-size: 0.8rem;
     }
 
+    /* 回首頁按鈕 */
     .back-home-btn {
         padding: 0.5rem 1rem;
     }
@@ -679,6 +721,7 @@ a {
         padding: 0.5rem 1.2rem;
     }
 
+    /* 使用者頁面 */
     .feature-section {
         padding: 2rem 1rem;
     }
@@ -722,6 +765,7 @@ a {
         margin-top: 0.2rem;
     }
 
+    /* 最新消息 */
     .news-section {
         padding: 2rem 1rem;
     }
@@ -748,6 +792,7 @@ a {
         order: 3;
     }
 
+    /* 愛心碼頁面 */
     .qrcode-section {
         padding: 1.5rem 1rem;
         min-height: 70vh;
@@ -787,11 +832,11 @@ a {
         font-size: 1.4rem;
     }
     .qrcode-download-btn {
-        padding: 0.7rem 1.5rem;
-        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+        font-size: 1.1rem;
     }
     .qrcode-download-btn .btn-icon {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
     .qrcode-status {
         font-size: 0.9rem;
@@ -808,7 +853,7 @@ a {
 }
 
 /* ================================================================
-   響應式設計 - 極小手機
+   響應式設計 - 極小手機 (螢幕寬度 <= 400px)
    ================================================================ */
 @media (max-width: 400px) {
     .hero-title {
@@ -820,6 +865,7 @@ a {
     .hero-description {
         font-size: 0.8rem;
     }
+
     .btn {
         font-size: 1rem;
         padding: 1rem 0.8rem;
@@ -845,6 +891,7 @@ a {
     .card-badge {
         font-size: 0.7rem;
     }
+
     .news-date {
         font-size: 0.6rem;
     }
@@ -855,6 +902,7 @@ a {
     .news-title {
         font-size: 0.78rem;
     }
+
     .section-title {
         font-size: 1.1rem;
     }
@@ -892,10 +940,10 @@ a {
     }
     .qrcode-download-btn {
         padding: 0.6rem 1.2rem;
-        font-size: 0.9rem;
+        font-size: 0.95rem;
     }
     .qrcode-download-btn .btn-icon {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
     .qrcode-status {
         font-size: 0.8rem;
@@ -903,6 +951,7 @@ a {
     .qrcode-footer-text {
         font-size: 0.7rem;
     }
+
     .footer {
         font-size: 0.7rem;
         padding: 0.8rem 0.5rem;
@@ -910,7 +959,7 @@ a {
 }
 
 /* ================================================================
-   響應式設計 - 手機橫向
+   響應式設計 - 手機橫向 (螢幕寬度 480px ~ 768px 且為橫向)
    ================================================================ */
 @media (max-width: 768px) and (orientation: landscape) {
     .hero {
