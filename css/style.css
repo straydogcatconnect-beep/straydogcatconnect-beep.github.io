@@ -236,9 +236,9 @@ a {
 
 .feature-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);  /* 電腦 2 欄 */
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.8rem;
-    max-width: 800px;  /* 縮小寬度讓卡片更集中 */
+    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -344,10 +344,9 @@ a {
 }
 
 /* ================================================================
-   愛心碼頁面樣式 (qrcode.html) - 完整版
+   愛心碼頁面樣式 (qrcode.html)
    ================================================================ */
 
-/* ----- 愛心碼主區域 ----- */
 .qrcode-section {
     flex: 1;
     padding: 2.5rem 1.5rem;
@@ -364,7 +363,6 @@ a {
     margin: 0 auto;
 }
 
-/* ----- 標題區域 ----- */
 .qrcode-header {
     text-align: center;
     margin-bottom: 2rem;
@@ -394,7 +392,6 @@ a {
     margin-top: 0.8rem;
 }
 
-/* ----- 卡片容器 ----- */
 .qrcode-card {
     background: #ffffff;
     border-radius: 32px;
@@ -407,7 +404,6 @@ a {
     box-shadow: 0 24px 72px rgba(0, 0, 0, 0.12);
 }
 
-/* ----- 愛心碼顯示區 ----- */
 .qrcode-display {
     background: #fbf9f6;
     border-radius: 20px;
@@ -427,7 +423,6 @@ a {
     background: #fefcf9;
 }
 
-/* ----- 佔位符 ----- */
 .qrcode-placeholder {
     display: flex;
     flex-direction: column;
@@ -463,7 +458,6 @@ a {
     color: #bbb;
 }
 
-/* ----- 愛心碼圖片 ----- */
 .qrcode-image {
     max-width: 100%;
     max-height: 400px;
@@ -486,7 +480,6 @@ a {
     }
 }
 
-/* ----- 狀態資訊 ----- */
 .qrcode-info {
     text-align: center;
     margin: 1.2rem 0 1.5rem;
@@ -499,10 +492,6 @@ a {
     font-weight: 500;
 }
 
-/* ================================================================
-   按鈕群組
-   ================================================================ */
-
 .qrcode-btn-group {
     display: flex;
     flex-direction: column;
@@ -510,7 +499,6 @@ a {
     width: 100%;
 }
 
-/* ----- 抽選按鈕 ----- */
 .qrcode-draw-btn {
     display: inline-flex;
     align-items: center;
@@ -544,7 +532,6 @@ a {
     margin-bottom: 0;
 }
 
-/* ----- 下載按鈕 ----- */
 .qrcode-download-btn {
     display: none;
     align-items: center;
@@ -595,13 +582,11 @@ a {
     margin-bottom: 0;
 }
 
-/* 下載成功後的短暫效果 */
 .qrcode-download-btn.success {
     background: linear-gradient(145deg, #5cb885, #3da36a);
     box-shadow: 0 8px 24px rgba(61, 163, 106, 0.35);
 }
 
-/* ----- 底部文字 ----- */
 .qrcode-footer-text {
     text-align: center;
     font-size: 0.9rem;
@@ -621,34 +606,6 @@ a {
     font-size: 0.95rem;
     letter-spacing: 0.5px;
     margin-top: auto;
-}
-
-/* ================================================================
-   響應式設計 - 平板 (769px ~ 1024px)
-   ================================================================ */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .hero {
-        min-height: 45vh;
-        background-attachment: scroll;
-    }
-    .hero-overlay {
-        min-height: 45vh;
-    }
-    .hero-title {
-        font-size: 2.4rem;
-    }
-    .hero-subtitle {
-        font-size: 1.4rem;
-    }
-    .btn {
-        width: 220px;
-        padding: 1.6rem 1.2rem;
-        font-size: 1.3rem;
-    }
-    .feature-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
-    }
 }
 
 /* ================================================================
@@ -708,7 +665,6 @@ a {
         font-size: 0.8rem;
     }
 
-    /* 回首頁按鈕 */
     .back-home-btn {
         padding: 0.5rem 1rem;
     }
@@ -721,12 +677,11 @@ a {
         padding: 0.5rem 1.2rem;
     }
 
-    /* 使用者頁面 */
     .feature-section {
         padding: 2rem 1rem;
     }
     .feature-grid {
-        grid-template-columns: 1fr;  /* 手機 1 欄 */
+        grid-template-columns: 1fr;
         gap: 1rem;
         max-width: 100%;
     }
@@ -765,7 +720,6 @@ a {
         margin-top: 0.2rem;
     }
 
-    /* 最新消息 */
     .news-section {
         padding: 2rem 1rem;
     }
@@ -792,7 +746,6 @@ a {
         order: 3;
     }
 
-    /* 愛心碼頁面 */
     .qrcode-section {
         padding: 1.5rem 1rem;
         min-height: 70vh;
@@ -959,7 +912,7 @@ a {
 }
 
 /* ================================================================
-   響應式設計 - 手機橫向 (螢幕寬度 480px ~ 768px 且為橫向)
+   響應式設計 - 手機橫向
    ================================================================ */
 @media (max-width: 768px) and (orientation: landscape) {
     .hero {
