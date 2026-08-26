@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>浪愛串聯 - 愛心碼抽選</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <!-- ===== 愛心碼主內容 ===== -->
+    <section class="qrcode-section">
+        <div class="container">
+            <h2 class="section-title">❤️ 愛心碼抽選</h2>
+            <p class="qrcode-subtitle">點擊下方按鈕，隨機抽出一個愛心碼</p>
+
+            <div class="qrcode-display" id="qrcodeDisplay">
+                <div class="qrcode-placeholder" id="qrcodePlaceholder">
+                    <span class="placeholder-icon">🎲</span>
+                    <p>點擊「抽」按鈕開始</p>
+                </div>
+                <img id="qrcodeImage" class="qrcode-image" style="display: none;" alt="愛心碼" />
+            </div>
+
+            <button class="qrcode-draw-btn" id="drawBtn">
+                <span class="btn-icon">🎯</span>
+                抽！
+            </button>
+
+            <p class="qrcode-status" id="qrcodeStatus">點擊按鈕抽選愛心碼</p>
+
+            <a href="user-home.html" class="qrcode-back-btn">← 返回使用者首頁</a>
+        </div>
+    </section>
+
+    <!-- ===== 頁尾 ===== -->
+    <footer class="footer">
+        <p>&copy; 2026 浪愛串聯 · 用愛終止流浪</p>
+    </footer>
+
+    <script src="js/qrcode.js"></script>
+
+</body>
+</html>
